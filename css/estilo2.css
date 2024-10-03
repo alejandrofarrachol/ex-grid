@@ -1,0 +1,79 @@
+.conteiner
+{
+  background-color: black;
+  padding: 10px;
+  font-size: 25px;
+  text-align: center;
+  display: grid;
+  grid-gap: 10px;
+  /*grid-template-columns: 150px 150px 250px;
+  grid-template-rows: 150px 250px 100px 50px 20px;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows:100px 1fr 7fr 1fr;
+  grid-template-columns: repeat(8,1fr);
+  grid-template-rows:repeat(3,200px);*/
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 2fr 9fr 9fr 2fr;
+  grid-template-areas: "header header header header header"
+                       "side1a contenido1a contenido2a contenido3a side2a"
+                       "side1b contenido1b contenido2b contenido3b side2b"
+                       "footer footer footer footer footer";
+}
+.conteiner>div
+{
+  background-color: wheat;
+}
+.conteiner .header
+{
+  background-color: darkgoldenrod;
+  grid-column-start: header;
+  grid-column-end: header;
+  /*grid-column: header;
+  grid-row: 1/3;*/
+}
+.conteiner .side1a
+{
+  background-color: bisque;
+  grid-column: side1a;
+}
+.conteiner .side1b
+{
+  background-color: bisque;
+  grid-column: side1b;
+}
+.conteiner .contenido1
+{
+  background-color: beige;
+  grid-column: contenido1a;
+  grid-row-start: contenido1a;
+  grid-row-end: contenido1b;
+
+}
+.conteiner .contenido2
+{
+  background-color: beige;
+  grid-column: contenido2a;
+  grid-row-start: contenido2a;
+  grid-row-end: contenido2b;
+
+}
+.conteiner .contenido3
+{
+  background-color: beige;
+  grid-column: contenido3a;
+  grid-row-start: contenido3a;
+  grid-row-end: contenido3b;
+
+}
+.conteiner .side2
+{
+  background-color: bisque;
+  grid-column: side2a;
+  grid-row-start: side2a;
+  grid-row-end: side2b;
+}
+.conteiner .footer
+{
+  background-color: silver;
+  grid-column: footer;
+}
